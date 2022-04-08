@@ -1,0 +1,61 @@
+:root {
+	--blue: #0f3b94;
+	--yellow: #ffc800;
+}
+
+body {
+	font-family: 'Courier New', monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+.header {
+	width: 100%;
+	text-align: center;
+	padding: 50px;
+}
+.content {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.product {
+	height: 100%;
+}
+.product .slideshow img {
+	width: 100%;
+}
+a {
+	color: var(--blue);
+}
+a:hover {
+	color: var(--yellow);
+}
+.footer {
+	text-align: center;
+	margin: 50px;
+}
+.nav {
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+.nav li {
+	margin: 0 10px 0 10px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: var(--yellow);
+	background: var(--blue);
+}
+
+::selection {
+	color: var(--yellow);
+	background: var(--blue);
+}
