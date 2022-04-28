@@ -59,3 +59,10 @@ a:hover {
 	color: var(--yellow);
 	background: var(--blue);
 }
+.active {
+	color: var(--yellow);
+}
+.tips img {
+	width: 100%;
+	max-width: 500px;
+}
