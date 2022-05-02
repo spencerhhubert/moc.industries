@@ -1,3 +1,13 @@
+>def finish:
+	- round walls
+	- slopes
+	- stud inversion
+	- circles
+	- trees
+	- folliage
+	- water
+	- castle walls
+
 need a way to "share" a technique. each header needs an obvious icon that creates a link with a stamp to that spot
 also a table of contents with those same links
 

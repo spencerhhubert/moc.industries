@@ -68,12 +68,12 @@ mega_html += "</ul>"
 for (let i=0; i<tips.length; i++) {
 	let category = tips[i]
 	mega_html += `<div class="row align-items-center">`
-	mega_html += `<div class="col-9">`
-	mega_html += `<h3 id="${category.category.replace(' ', '_')}">${category.category}</h3>`
-	mega_html += `</div>`
-	mega_html += `<div class="col">`
-	mega_html += `<p class="share text-right" onclick="navigator.clipboard.writeText('https://moc.industries/tips#${category.category.replace(' ', '_')}')">📋 Share</p>`
-	mega_html += `</div>`
+		mega_html += `<div class="col-9">`
+			mega_html += `<h3 id="${category.category.replace(' ', '_')}">${category.category}</h3>`
+		mega_html += `</div>`
+		mega_html += `<div class="col">`
+			mega_html += `<p class="share text-right" onclick="share('https://moc.industries/tips#${category.category.replace(' ', '_')}', this)">📋 Share</p>`
+		mega_html += `</div>`
 	mega_html += `</div>`
 	for (let j=0; j<category.pics.length; j++) {
 		let tip = category.pics[j]
@@ -89,3 +89,12 @@ for (let i=0; i<tips.length; i++) {
 }
 let node = document.getElementById("tips")
 node.innerHTML += mega_html
+
+function share(link, node) {
+	navigator.clipboard.writeText(link)
+	let previous_content = node.innerHTML
+	node.innerHTML = "✅ Copied!"
+	setTimeout(function() {
+		node.innerHTML = previous_content
+	}, 1500)
+}
