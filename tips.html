@@ -37,6 +37,17 @@
 	const tips = [
 		{name: "Stud Inversion", path: "stud_inversion", pics: ['jumper_inversion.png', 'cheese_slope_plate.png', 'brackets_inversion.png', '1x1_modified_plate_inversion.png', '1x2_round_plate.png', 'headlight_inversion.png']}
 	]
+
+	const tips = [
+		{
+		category: "Stud Inversion",
+		path: "stud_inversion",
+		pics: [
+			{name: "jumper_inversion.png"},
+			{name: "cheese_slope_plate.png"}
+		]
+		}
+
 	let contents = []
 	let mega_html = ""
 	mega_html += "<h3>Table of Contents</h3><ul>"
@@ -49,7 +60,14 @@
 
 	for (let i=0; i<tips.length; i++) {
 		let category = tips[i]
+		mega_html += `<div class="row align-items-center">`
+		mega_html += `<div class="col-9">`
 		mega_html += `<h3 id="${category.name.replace(' ', '_')}">${category.name}</h3>`
+		mega_html += `</div>`
+		mega_html += `<div class="col">`
+		mega_html += `<a href="#" onclick="navigator.clipboard.writeText('https://moc.industries/tips#${category.name.replace(' ', '_')}')">📋 Share</a>`
+		mega_html += `</div>`
+		mega_html += `</div>`
 		for (let j=0; j<category.pics.length; j++) {
 			let tip = category.pics[j]
 			let file = tip
