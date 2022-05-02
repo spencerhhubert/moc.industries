@@ -29,54 +29,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="tips.js"></script>
  </body>
-<script>
-	//I'm a cringe loser so instead of node.js or php we're going to have a mega list of pictures from the tips dir
-	//it's best to just generate this list with like python
-
-	const tips = [
-		{name: "Stud Inversion", path: "stud_inversion", pics: ['jumper_inversion.png', 'cheese_slope_plate.png', 'brackets_inversion.png', '1x1_modified_plate_inversion.png', '1x2_round_plate.png', 'headlight_inversion.png']}
-	]
-
-	const tips = [
-		{
-		category: "Stud Inversion",
-		path: "stud_inversion",
-		pics: [
-			{name: "jumper_inversion.png"},
-			{name: "cheese_slope_plate.png"}
-		]
-		}
-
-	let contents = []
-	let mega_html = ""
-	mega_html += "<h3>Table of Contents</h3><ul>"
-	for (let i=0; i<tips.length; i++) {
-		name = tips[i].name
-		contents.push(name)
-		mega_html += `<li><a href="#${name.replace(' ', '_')}">${name}</a></li>`
-	}
-	mega_html += "</ul>"
-
-	for (let i=0; i<tips.length; i++) {
-		let category = tips[i]
-		mega_html += `<div class="row align-items-center">`
-		mega_html += `<div class="col-9">`
-		mega_html += `<h3 id="${category.name.replace(' ', '_')}">${category.name}</h3>`
-		mega_html += `</div>`
-		mega_html += `<div class="col">`
-		mega_html += `<a href="#" onclick="navigator.clipboard.writeText('https://moc.industries/tips#${category.name.replace(' ', '_')}')">📋 Share</a>`
-		mega_html += `</div>`
-		mega_html += `</div>`
-		for (let j=0; j<category.pics.length; j++) {
-			let tip = category.pics[j]
-			let file = tip
-			let name = (tip.slice(0, tip.length-4)).replace('_', ' ')
-			mega_html += `<div class="row justify-content-center">`
-			mega_html += `<img src="images/tips/${category.path}/${file}" alt="LEGO Technique ${category.name} ${name}">`
-			mega_html += `</div>`
-		}
-	}
-	let node = document.getElementById("tips")
-	node.innerHTML += mega_html
-</script>

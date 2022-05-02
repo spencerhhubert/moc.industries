@@ -66,3 +66,11 @@ a:hover {
 	width: 100%;
 	max-width: 500px;
 }
+.share {
+	color: var(--blue);
+}
+.share:hover {
+	color: var(--yellow);
+	text-decoration: underline;
+	cursor: pointer;
+}
