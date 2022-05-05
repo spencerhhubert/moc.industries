@@ -12,6 +12,7 @@ for category in categories:
 	category_object = {}
 	category_path = os.path.join(root, category)
 	pics = os.listdir(category_path)
+	pics = filter(lambda x:os.path.isfile(os.path.join(category_path, x)), pics)
 	category_object["category"] = deunderscore(category.title())
 	category_object["path"] = category
 	category_object["pics"] = []

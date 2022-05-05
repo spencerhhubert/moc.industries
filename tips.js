@@ -1,16 +1,6 @@
 //generate this from output of python script
 const tips = [
     {
-        "category": "Round Walls",
-        "path": "round_walls",
-        "pics": [
-            {
-                "name": "1x2_round_plates.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
         "category": "Slopes",
         "path": "slopes",
         "pics": [
@@ -25,15 +15,29 @@ const tips = [
         ]
     },
     {
+        "category": "Trees",
+        "path": "trees",
+        "pics": [
+            {
+                "name": "grass_stems.png",
+                "credit": ""
+            },
+            {
+                "name": "animal_pieces_tree01.png",
+                "credit": ""
+            },
+            {
+                "name": "animal_pieces_tree02.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
         "category": "Stud Inversion",
         "path": "stud_inversion",
         "pics": [
             {
-                "name": "1x1_modified_plate_inversion.png",
-                "credit": ""
-            },
-            {
-                "name": "brackets_inversion.png",
+                "name": "jumper_inversion.png",
                 "credit": ""
             },
             {
@@ -41,7 +45,11 @@ const tips = [
                 "credit": ""
             },
             {
-                "name": "headlight_inversion.png",
+                "name": "brackets_inversion.png",
+                "credit": ""
+            },
+            {
+                "name": "1x1_modified_plate_inversion.png",
                 "credit": ""
             },
             {
@@ -49,12 +57,23 @@ const tips = [
                 "credit": ""
             },
             {
-                "name": "jumper_inversion.png",
+                "name": "headlight_inversion.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Round Walls",
+        "path": "round_walls",
+        "pics": [
+            {
+                "name": "1x2_round_plates.png",
                 "credit": ""
             }
         ]
     }
 ]
+
 let contents = []
 let mega_html = ""
 mega_html += "<h3>Table of Contents</h3><ul>"
