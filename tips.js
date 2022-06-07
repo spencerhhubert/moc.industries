@@ -1,6 +1,56 @@
 //generate this from output of python script
 const tips = [
     {
+        "category": "Round Walls",
+        "path": "round_walls",
+        "pics": [
+            {
+                "name": "1x2_round_plates.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Water",
+        "path": "water",
+        "pics": [
+            {
+                "name": "gradient_and_tiles02.png",
+                "credit": ""
+            },
+            {
+                "name": "studs_stacked.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles03.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Circles",
+        "path": "circles",
+        "pics": [
+            {
+                "name": "circles02.png",
+                "credit": ""
+            },
+            {
+                "name": "circles.png",
+                "credit": ""
+            },
+            {
+                "name": "circles01.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
         "category": "Slopes",
         "path": "slopes",
         "pics": [
@@ -15,9 +65,43 @@ const tips = [
         ]
     },
     {
+        "category": "Stud Inversion",
+        "path": "stud_inversion",
+        "pics": [
+            {
+                "name": "1x1_modified_plate_inversion.png",
+                "credit": ""
+            },
+            {
+                "name": "brackets_inversion.png",
+                "credit": ""
+            },
+            {
+                "name": "cheese_slope_plate.png",
+                "credit": ""
+            },
+            {
+                "name": "headlight_inversion.png",
+                "credit": ""
+            },
+            {
+                "name": "1x2_round_plate.png",
+                "credit": ""
+            },
+            {
+                "name": "jumper_inversion.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
         "category": "Trees",
         "path": "trees",
         "pics": [
+            {
+                "name": "technic_connectors.png",
+                "credit": ""
+            },
             {
                 "name": "grass_stems.png",
                 "credit": ""
@@ -28,82 +112,6 @@ const tips = [
             },
             {
                 "name": "animal_pieces_tree02.png",
-                "credit": ""
-            },
-            {
-                "name": "technic_connectors.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
-        "category": "Water",
-        "path": "water",
-        "pics": [
-            {
-                "name": "gradient_and_tiles02.png",
-                "credit": ""
-            },
-            {
-                "name": "gradient_and_tiles03.png",
-                "credit": ""
-            },
-            {
-                "name": "studs_stacked.png",
-                "credit": ""
-            },
-            {
-                "name": "gradient_and_tiles.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
-        "category": "Circles",
-        "path": "circles",
-        "pics": [
-            {
-                "name": "circles.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
-        "category": "Stud Inversion",
-        "path": "stud_inversion",
-        "pics": [
-            {
-                "name": "jumper_inversion.png",
-                "credit": ""
-            },
-            {
-                "name": "cheese_slope_plate.png",
-                "credit": ""
-            },
-            {
-                "name": "brackets_inversion.png",
-                "credit": ""
-            },
-            {
-                "name": "1x1_modified_plate_inversion.png",
-                "credit": ""
-            },
-            {
-                "name": "1x2_round_plate.png",
-                "credit": ""
-            },
-            {
-                "name": "headlight_inversion.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
-        "category": "Round Walls",
-        "path": "round_walls",
-        "pics": [
-            {
-                "name": "1x2_round_plates.png",
                 "credit": ""
             }
         ]
