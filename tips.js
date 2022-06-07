@@ -29,6 +29,42 @@ const tips = [
             {
                 "name": "animal_pieces_tree02.png",
                 "credit": ""
+            },
+            {
+                "name": "technic_connectors.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Water",
+        "path": "water",
+        "pics": [
+            {
+                "name": "gradient_and_tiles02.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles03.png",
+                "credit": ""
+            },
+            {
+                "name": "studs_stacked.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Circles",
+        "path": "circles",
+        "pics": [
+            {
+                "name": "circles.png",
+                "credit": ""
             }
         ]
     },

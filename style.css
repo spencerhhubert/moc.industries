@@ -74,3 +74,6 @@ a:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
+.article {
+	margin-bottom: 16px;
+}

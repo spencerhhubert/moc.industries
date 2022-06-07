@@ -8,25 +8,33 @@ const normal_paypal_html = `
 `
 //there's a thing in the button code that lets you add a textbox type thing. we're going to do this for the coupon code tracking
 const discount_paypal_html = ``
-const pickup_paypal_html = ``
+const pickup_paypal_html = `
+I'm the pickup code
+`
 const discount_and_pickup_html = ``
 
 //beginning state
 let paypal_state = normal_paypal_html
 changePaypalState(normal_paypal_html)
 
+let pickup_state = false
+
 //yes you can just read them
 //use them all to make sure they work why don't you
 valid_promos = ["rebellug", "Real Monkey Business"]
 
+function changeVisualDiscount() {
+	price_node = document.getElementById("price");
+	price_node.innerHTML = "$16.00"
+	price_node.style.color = "Green"
+	status_node.innerHTML = '✅'
+}
+
 function tryApplyDiscount() {
 	status_node = document.getElementById("promo_status")
-	price_node = document.getElementById("price");
 	code_node = document.getElementById("promo_code");
 	if (valid_promos.includes(code_node.value)) {
-		price_node.innerHTML = "$13.00"
-		price_node.style.color = "Green"
-		status_node.innerHTML = '✅'
+		changeVisualDiscount()
 		changePaypalState(discount_paypal_html)
 	} else {
 		status_node.innerHTML = '❌'
@@ -34,8 +42,15 @@ function tryApplyDiscount() {
 	}
 //load the discount html...
 }
-function changePickupStatus() {
-	changePaypalState(pickup_paypal_html)
+function changePickupState() {
+	if (pickup_state) {
+		//put it back to normal
+		pickup_state = false
+		changePaypalState(normal_paypal_html)
+	} else {
+		pickup_state = true
+		changePaypalState(pickup_paypal_html)
+	}
 }
 
 function changePaypalState(desired_state) {
