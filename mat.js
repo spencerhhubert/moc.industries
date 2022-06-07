@@ -33,18 +33,22 @@ function changeVisualDiscount() {
 	if (discount_state) {
 		price_node.innerHTML = "$20.00"
 		price_node.style.color = "Black"
+		discount_state = false
 	} else {
 		price_node.innerHTML = "$16.00"
 		price_node.style.color = "Green"
+		discount_state = true
 	}
 }
 
 function changePickupState() {
 	if (pickup_state) {
 		pickup_state = false
+		changeVisualDiscount()
 		changePaypalState(normal_paypal_html)
 	} else {
 		pickup_state = true
+		changeVisualDiscount()
 		changePaypalState(pickup_paypal_html)
 	}
 }
