@@ -1,38 +1,6 @@
 //generate this from output of python script
 const tips = [
     {
-        "category": "Round Walls",
-        "path": "round_walls",
-        "pics": [
-            {
-                "name": "1x2_round_plates.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
-        "category": "Water",
-        "path": "water",
-        "pics": [
-            {
-                "name": "gradient_and_tiles02.png",
-                "credit": ""
-            },
-            {
-                "name": "studs_stacked.png",
-                "credit": ""
-            },
-            {
-                "name": "gradient_and_tiles03.png",
-                "credit": ""
-            },
-            {
-                "name": "gradient_and_tiles.png",
-                "credit": ""
-            }
-        ]
-    },
-    {
         "category": "Circles",
         "path": "circles",
         "pics": [
@@ -46,6 +14,16 @@ const tips = [
             },
             {
                 "name": "circles01.png",
+                "credit": ""
+            }
+        ]
+    },
+    {
+        "category": "Round Walls",
+        "path": "round_walls",
+        "pics": [
+            {
+                "name": "1x2_round_plates.png",
                 "credit": ""
             }
         ]
@@ -115,7 +93,29 @@ const tips = [
                 "credit": ""
             }
         ]
-    }
+    },
+    {
+        "category": "Water",
+        "path": "water",
+        "pics": [
+            {
+                "name": "gradient_and_tiles02.png",
+                "credit": ""
+            },
+            {
+                "name": "studs_stacked.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles03.png",
+                "credit": ""
+            },
+            {
+                "name": "gradient_and_tiles.png",
+                "credit": ""
+            }
+        ]
+    },
 ]
 
 let contents = []
