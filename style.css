@@ -77,11 +77,14 @@ a:hover {
 .article {
 	margin-bottom: 16px;
 }
-.container {
+.img-container {
   display: flex;
   flex-direction: column;
 }
-.container section:first-child {
+.img-container section:first-child {
   display: flex;
   align-items: flex-start; /* new */
+}
+.img-container img {
+  height: auto;
 }

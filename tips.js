@@ -142,8 +142,8 @@ for (let i=0; i<tips.length; i++) {
 		let tip = category.pics[j]
 		let file = tip.name
 		let name = (tip.name.slice(0, tip.length-4)).replace('_', ' ')
-		mega_html += `<div class="row justify-content-center">`
-		mega_html += `<img src="images/tips/${category.path}/${file}" alt="LEGO Technique ${category.category} ${name}">`
+		mega_html += `<div class="row justify-content-center img-container">`
+		mega_html += `<div><img src="images/tips/${category.path}/${file}" alt="LEGO Technique ${category.category} ${name}"></div>`
 		if (tip.credit != "") {
 			mega_html += "By person"
 		}
