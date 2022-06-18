@@ -33,7 +33,7 @@ const discount_paypal_html = `
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="F9MF5U8M2S77J">
 <table>
-<tr><td><input type="hidden" name="on0" value="Discount Reason"></td></tr><tr><td><input type="hidden" name="os0" maxlength="200"></td></tr>
+<tr><td><input type="hidden" name="on0" value="Discount Reason"></td></tr><tr><td><input id="paypal_discount_reason" type="hidden" name="os0" maxlength="200"></td></tr>
 </table>
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -59,14 +59,17 @@ let discount_state = false
 //use them all to make sure they work why don't you
 valid_codes = ["rebellug", "brickworld"]
 
+let base_price = 25
+let discount_price = 20 
+
 function changeVisualDiscount() {
 	price_node = document.getElementById("price");
 	if (discount_state) {
-		price_node.innerHTML = "$20.00"
+		price_node.innerHTML = `\$${base_price}.00`
 		price_node.style.color = "Black"
 		discount_state = false
 	} else {
-		price_node.innerHTML = "$16.00"
+		price_node.innerHTML = `\$${discount_price}.00`
 		price_node.style.color = "Green"
 		discount_state = true
 	}
@@ -115,3 +118,7 @@ function changePaypalState(desired_state) {
 	paypal_node = document.getElementById("paypal_html")
 	paypal_node.innerHTML = paypal_state
 }
+
+changePaypalState(normal_paypal_html)
+discount_state = true //this gets switched in the next line. i hate this code grr
+changeVisualDiscount()
