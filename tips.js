@@ -120,7 +120,7 @@ const tips = [
 
 let contents = []
 let mega_html = ""
-mega_html += "<h3>Table of Contents</h3><ul>"
+mega_html += "<div style='max-width: 500px;'><h3>Table of Contents</h3><ul>"
 for (let i=0; i<tips.length; i++) {
 	name = tips[i].category
 	contents.push(name)
@@ -150,6 +150,8 @@ for (let i=0; i<tips.length; i++) {
 		mega_html += `</div>`
 	}
 }
+mega_html += `</div>`
+
 let node = document.getElementById("tips")
 node.innerHTML += mega_html
 
