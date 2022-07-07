@@ -51,10 +51,10 @@ paypal.Buttons({
       purchase_units: [{
         amount: {
             currency_code: "USD",
-            value: calculateAmount("tier1").item_total + calculateAmount("tier2").shipping,
+            value: calculateAmount("tier2").item_total + calculateAmount("tier2").shipping,
             breakdown: {
               item_total: {
-                value: calculateAmount("tier1").item_total,
+                value: calculateAmount("tier2").item_total,
                 currency_code: "USD",
               },
               shipping: {
