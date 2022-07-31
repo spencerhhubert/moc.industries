@@ -57,21 +57,25 @@ let discount_state = false
 
 //yes you can just read them
 //use them all to make sure they work why don't you
-valid_codes = ["rebellug", "brickworld"]
+valid_codes = ["rebellug", "brickworld", "brickfair"]
 
 let base_price = 25
 let discount_price = 20 
 
 function changeVisualDiscount() {
 	price_node = document.getElementById("price");
+    extra_info_node = document.getElementById("extra_info");
 	if (discount_state) {
 		price_node.innerHTML = `\$${base_price}.00`
 		price_node.style.color = "Black"
+        extra_info_node.style.display = "none"
 		discount_state = false
 	} else {
 		price_node.innerHTML = `\$${discount_price}.00`
 		price_node.style.color = "Green"
+        extra_info_node.style.display = "block"
 		discount_state = true
+
 	}
 }
 
